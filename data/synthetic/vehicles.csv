@@ -1,0 +1,4 @@
+﻿type_id,name,inner_length_mm,inner_width_mm,inner_height_mm,max_payload_kg,fixed_cost,cost_per_km,count
+V42,4.2m 厢式货车（蓝牌）,4200,2100,2100,2000.0,400.0,4.0,8
+EV36,3.6m 新能源轻卡,3600,1800,1800,1200.0,260.0,1.9,6
+V68,6.8m 厢式货车（黄牌，城区多有限行）,6800,2400,2400,5000.0,780.0,7.4,5

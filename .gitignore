@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+.DS_Store
+
+# data/synthetic/ 随仓库提供一份样例，便于评审不跑代码也能直接查看 CSV 结构与字段；
+# 它可由 python -m cityload.cli data 重新生成，内容一致。
+# 因此这里刻意不忽略它。
+
+# 注意：reports/ 下的实验结果与 3D 装卸示意图属于交付证据，必须提交，不要忽略。

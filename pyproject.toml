@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cityload"
+version = "0.1.0"
+description = "城市配送多约束智能配载与运输调度（传化 × 动势 AI重构产业·架构师大赛 · AI＋物流赛道）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "见 LICENSE" }
+dependencies = []
+
+[project.optional-dependencies]
+# 本仓库核心只依赖标准库；以下为可选的加速/可视化依赖，不装也能跑
+speedup = ["numpy>=1.24"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+cityload = "cityload.cli:main"
+
+[tool.setuptools]
+packages = ["cityload"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

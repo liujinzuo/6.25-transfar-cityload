@@ -1,0 +1,7 @@
+# 本仓库核心算法只依赖 Python 标准库，正常无需安装任何第三方包。
+# 若希望通过 pip 安装为命令（可选）：
+#     pip install -e .
+#
+# 可选依赖（不装也能完整跑通，仅测试/加速用）：
+#     pip install pytest      # 用 pytest 替代 unittest 运行 tests/
+#     pip install numpy       # 预留的向量化加速位，当前代码未强制依赖

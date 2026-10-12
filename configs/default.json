@@ -1,0 +1,68 @@
+{
+  "seed": 20260214,
+  "network": {
+    "detour_factor": 1.25,
+    "speed_kmh": 30.0,
+    "depot_open_min": 420,
+    "max_route_duration_min": 600,
+    "max_route_wait_min": 120,
+    "comment": "detour_factor 用直线距离乘以路网绕行系数近似城市路网里程；speed_kmh 为城市配送平均车速；max_route_duration_min 为单车单日最长在线时长（分钟），max_route_wait_min 为单车累计等待时间上限（分钟）"
+  },
+  "demand": {
+    "stores": 30,
+    "area_km": 22.0,
+    "lines_per_store_min": 8,
+    "lines_per_store_max": 14,
+    "qty_min": 3,
+    "qty_max": 11,
+    "service_min_per_stop": 10,
+    "comment": "全部为合成数据，不含任何真实客户或业务数据"
+  },
+  "fleet": [
+    {
+      "type_id": "V42",
+      "name": "4.2m 厢式货车（蓝牌）",
+      "inner_length_mm": 4200,
+      "inner_width_mm": 2100,
+      "inner_height_mm": 2100,
+      "max_payload_kg": 2000,
+      "fixed_cost": 400,
+      "cost_per_km": 4.0,
+      "count": 8
+    },
+    {
+      "type_id": "EV36",
+      "name": "3.6m 新能源轻卡",
+      "inner_length_mm": 3600,
+      "inner_width_mm": 1800,
+      "inner_height_mm": 1800,
+      "max_payload_kg": 1200,
+      "fixed_cost": 260,
+      "cost_per_km": 1.9,
+      "count": 6
+    },
+    {
+      "type_id": "V68",
+      "name": "6.8m 厢式货车（黄牌，城区多有限行）",
+      "inner_length_mm": 6800,
+      "inner_width_mm": 2400,
+      "inner_height_mm": 2400,
+      "max_payload_kg": 5000,
+      "fixed_cost": 780,
+      "cost_per_km": 7.4,
+      "count": 5
+    }
+  ],
+  "packing": {
+    "min_support_ratio": 0.75,
+    "max_height_ratio": 0.95,
+    "zone_height_slack_mm": 400,
+    "heavy_bottom_max_z_mm": 500,
+    "max_block_height_ratio": 0.55,
+    "zone_realloc_rounds": 2,
+    "floor_grid_step_mm": 250,
+    "planning_volume_derate": 0.55,
+    "planning_payload_derate": 0.98,
+    "comment": "min_support_ratio：货物底面至少被下方箱顶或车厢地板支撑的比例；max_height_ratio：允许占用的车厢高度上限；zone_height_slack_mm：为了留在本门店分区内最多愿意额外付出的高度；heavy_bottom_max_z_mm：重货（日化耗材）顶部离地高度上限；planning_volume_derate：排线阶段按装载器实测可达效率折减车厢容积，避免排出装不下的路径"
+  }
+}

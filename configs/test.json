@@ -1,0 +1,62 @@
+{
+  "seed": 7,
+  "network": {
+    "detour_factor": 1.25,
+    "speed_kmh": 30.0,
+    "depot_open_min": 420,
+    "max_route_duration_min": 600,
+    "max_route_wait_min": 150
+  },
+  "demand": {
+    "stores": 8,
+    "area_km": 14.0,
+    "lines_per_store_min": 6,
+    "lines_per_store_max": 9,
+    "qty_min": 2,
+    "qty_max": 6,
+    "service_min_per_stop": 10
+  },
+  "fleet": [
+    {
+      "type_id": "V42",
+      "name": "4.2m 厢式货车（蓝牌）",
+      "inner_length_mm": 4200,
+      "inner_width_mm": 2100,
+      "inner_height_mm": 2100,
+      "max_payload_kg": 2000,
+      "fixed_cost": 400,
+      "cost_per_km": 4.0,
+      "count": 4
+    },
+    {
+      "type_id": "EV36",
+      "name": "3.6m 新能源轻卡",
+      "inner_length_mm": 3600,
+      "inner_width_mm": 1800,
+      "inner_height_mm": 1800,
+      "max_payload_kg": 1200,
+      "fixed_cost": 260,
+      "cost_per_km": 1.9,
+      "count": 4
+    },
+    {
+      "type_id": "V68",
+      "name": "6.8m 厢式货车（黄牌）",
+      "inner_length_mm": 6800,
+      "inner_width_mm": 2400,
+      "inner_height_mm": 2400,
+      "max_payload_kg": 5000,
+      "fixed_cost": 780,
+      "cost_per_km": 7.4,
+      "count": 2
+    }
+  ],
+  "packing": {
+    "min_support_ratio": 0.75,
+    "max_height_ratio": 0.95,
+    "zone_height_slack_mm": 400,
+    "heavy_bottom_max_z_mm": 500,
+    "planning_volume_derate": 0.55,
+    "planning_payload_derate": 0.98
+  }
+}
